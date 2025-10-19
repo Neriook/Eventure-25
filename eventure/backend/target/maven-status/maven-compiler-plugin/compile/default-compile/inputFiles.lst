@@ -1,0 +1,15 @@
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\BackendApplication.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\config\AWSConfig.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\config\WebConfig.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\controller\ConflictController.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\controller\EventController.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\controller\WeatherController.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\model\ChatRequest.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\model\ChatResponse.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\model\Event.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\repository\EventRepository.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\service\BedrockService.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\service\EventService.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\service\SmartSchedulerService.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\service\TravelTimeService.java
+C:\Users\kenji\Downloads\eventure\eventure\backend\src\main\java\beck\backend\service\WeatherService.java

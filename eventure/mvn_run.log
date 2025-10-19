@@ -1,0 +1,245 @@
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< dubhacks25:schedular >------------------------
+[INFO] Building schedular 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.6:run (default-cli) > test-compile @ schedular >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ schedular ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ schedular ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ schedular ---
+[INFO] skip non existing resourceDirectory /Users/apple/Desktop/dubhacksdb2025/backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ schedular ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.6:run (default-cli) < test-compile @ schedular <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.6:run (default-cli) @ schedular ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-19T08:41:50.130-07:00  INFO 80292 --- [backend] [           main] beck.backend.BackendApplication          : Starting BackendApplication using Java 23.0.2 with PID 80292 (/Users/apple/Desktop/dubhacksdb2025/backend/target/classes started by apple in /Users/apple/Desktop/dubhacksdb2025/backend)
+2025-10-19T08:41:50.132-07:00  INFO 80292 --- [backend] [           main] beck.backend.BackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-10-19T08:41:50.924-07:00  INFO 80292 --- [backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-19T08:41:50.937-07:00  INFO 80292 --- [backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-19T08:41:50.937-07:00  INFO 80292 --- [backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-19T08:41:50.980-07:00  INFO 80292 --- [backend] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-19T08:41:50.980-07:00  INFO 80292 --- [backend] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 812 ms
+2025-10-19T08:41:54.287-07:00  WARN 80292 --- [backend] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eventController': Unsatisfied dependency expressed through field 'eventService': Error creating bean with name 'eventService': Invocation of init method failed
+2025-10-19T08:41:54.293-07:00  INFO 80292 --- [backend] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-19T08:41:54.309-07:00  INFO 80292 --- [backend] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-19T08:41:54.321-07:00 ERROR 80292 --- [backend] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eventController': Unsatisfied dependency expressed through field 'eventService': Error creating bean with name 'eventService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at beck.backend.BackendApplication.main(BackendApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eventService': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:429) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1698) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1643) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 22 common frames omitted
+Caused by: software.amazon.awssdk.core.exception.SdkClientException: Received an UnknownHostException when attempting to interact with a service. See cause for the exact endpoint that is failing to resolve. If this is happening on an endpoint that previously worked, there may be a network connectivity issue or your DNS cache could be storing endpoints for too long.
+	at software.amazon.awssdk.core.exception.SdkClientException$BuilderImpl.build(SdkClientException.java:111) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.awscore.interceptor.HelpfulUnknownHostExceptionInterceptor.modifyException(HelpfulUnknownHostExceptionInterceptor.java:59) ~[aws-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.interceptor.ExecutionInterceptorChain.modifyException(ExecutionInterceptorChain.java:181) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.utils.ExceptionReportingUtils.runModifyException(ExceptionReportingUtils.java:54) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.utils.ExceptionReportingUtils.reportFailureToInterceptors(ExceptionReportingUtils.java:38) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ExecutionFailureExceptionReportingStage.execute(ExecutionFailureExceptionReportingStage.java:39) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ExecutionFailureExceptionReportingStage.execute(ExecutionFailureExceptionReportingStage.java:26) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.AmazonSyncHttpClient$RequestExecutionBuilderImpl.execute(AmazonSyncHttpClient.java:210) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.invoke(BaseSyncClientHandler.java:103) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.doExecute(BaseSyncClientHandler.java:173) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.lambda$execute$1(BaseSyncClientHandler.java:80) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.measureApiCallSuccess(BaseSyncClientHandler.java:182) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.handler.BaseSyncClientHandler.execute(BaseSyncClientHandler.java:74) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.client.handler.SdkSyncClientHandler.execute(SdkSyncClientHandler.java:45) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.awscore.client.handler.AwsSyncClientHandler.execute(AwsSyncClientHandler.java:53) ~[aws-core-2.28.29.jar:na]
+	at software.amazon.awssdk.services.dynamodb.DefaultDynamoDbClient.describeTable(DefaultDynamoDbClient.java:2340) ~[dynamodb-2.20.26.jar:na]
+	at beck.backend.repository.EventRepository.createTableIfNotExists(EventRepository.java:41) ~[classes/:na]
+	at beck.backend.service.EventService.init(EventService.java:36) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 33 common frames omitted
+Caused by: software.amazon.awssdk.core.exception.SdkClientException: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+	at software.amazon.awssdk.core.exception.SdkClientException$BuilderImpl.build(SdkClientException.java:111) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.exception.SdkClientException.create(SdkClientException.java:47) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.utils.RetryableStageHelper2.setLastException(RetryableStageHelper2.java:226) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage2.execute(RetryableStage2.java:65) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage2.execute(RetryableStage2.java:36) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.StreamManagingStage.execute(StreamManagingStage.java:53) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.StreamManagingStage.execute(StreamManagingStage.java:35) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallTimeoutTrackingStage.executeWithTimer(ApiCallTimeoutTrackingStage.java:82) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallTimeoutTrackingStage.execute(ApiCallTimeoutTrackingStage.java:62) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallTimeoutTrackingStage.execute(ApiCallTimeoutTrackingStage.java:43) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallMetricCollectionStage.execute(ApiCallMetricCollectionStage.java:50) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallMetricCollectionStage.execute(ApiCallMetricCollectionStage.java:32) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ExecutionFailureExceptionReportingStage.execute(ExecutionFailureExceptionReportingStage.java:37) ~[sdk-core-2.28.29.jar:na]
+	... 50 common frames omitted
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 1 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com: nodename nor servname provided, or not known
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 2 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 3 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 4 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 5 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 6 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 7 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+	Suppressed: software.amazon.awssdk.core.exception.SdkClientException: Request attempt 8 failure: Unable to execute HTTP request: dynamodb.us-east-1.amazonaws.com
+Caused by: java.net.UnknownHostException: dynamodb.us-east-1.amazonaws.com
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:998) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1807) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1676) ~[na:na]
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376) ~[httpclient-4.5.13.jar:4.5.13]
+	at software.amazon.awssdk.http.apache.internal.conn.ClientConnectionManagerFactory$DelegatingHttpClientConnectionManager.connect(ClientConnectionManagerFactory.java:86) ~[apache-client-2.28.29.jar:na]
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) ~[httpclient-4.5.13.jar:4.5.13]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.13.jar:4.5.13]
+	at software.amazon.awssdk.http.apache.internal.impl.ApacheSdkHttpClient.execute(ApacheSdkHttpClient.java:72) ~[apache-client-2.28.29.jar:na]
+	at software.amazon.awssdk.http.apache.ApacheHttpClient.execute(ApacheHttpClient.java:254) ~[apache-client-2.28.29.jar:na]
+	at software.amazon.awssdk.http.apache.ApacheHttpClient.access$500(ApacheHttpClient.java:104) ~[apache-client-2.28.29.jar:na]
+	at software.amazon.awssdk.http.apache.ApacheHttpClient$1.call(ApacheHttpClient.java:231) ~[apache-client-2.28.29.jar:na]
+	at software.amazon.awssdk.http.apache.ApacheHttpClient$1.call(ApacheHttpClient.java:228) ~[apache-client-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.util.MetricUtils.measureDurationUnsafe(MetricUtils.java:99) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.MakeHttpRequestStage.executeHttpRequest(MakeHttpRequestStage.java:79) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.MakeHttpRequestStage.execute(MakeHttpRequestStage.java:57) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.MakeHttpRequestStage.execute(MakeHttpRequestStage.java:40) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.RequestPipelineBuilder$ComposingRequestPipelineStage.execute(RequestPipelineBuilder.java:206) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptTimeoutTrackingStage.execute(ApiCallAttemptTimeoutTrackingStage.java:74) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptTimeoutTrackingStage.execute(ApiCallAttemptTimeoutTrackingStage.java:43) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.TimeoutExceptionHandlingStage.execute(TimeoutExceptionHandlingStage.java:79) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.TimeoutExceptionHandlingStage.execute(TimeoutExceptionHandlingStage.java:41) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptMetricCollectionStage.execute(ApiCallAttemptMetricCollectionStage.java:55) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.ApiCallAttemptMetricCollectionStage.execute(ApiCallAttemptMetricCollectionStage.java:39) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage2.executeRequest(RetryableStage2.java:93) ~[sdk-core-2.28.29.jar:na]
+	at software.amazon.awssdk.core.internal.http.pipeline.stages.RetryableStage2.execute(RetryableStage2.java:56) ~[sdk-core-2.28.29.jar:na]
+	... 62 common frames omitted
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.972 s
+[INFO] Finished at: 2025-10-19T08:41:54-07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.6:run (default-cli) on project schedular: Process terminated with exit code: 1 -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.5.6:run (default-cli) on project schedular: Process terminated with exit code: 1
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Process terminated with exit code: 1
+    at org.springframework.boot.maven.JavaProcessExecutor.run (JavaProcessExecutor.java:74)
+    at org.springframework.boot.maven.RunMojo.run (RunMojo.java:84)
+    at org.springframework.boot.maven.AbstractRunMojo.run (AbstractRunMojo.java:255)
+    at org.springframework.boot.maven.AbstractRunMojo.execute (AbstractRunMojo.java:218)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:255)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:201)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:361)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:314)
+[ERROR] 
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

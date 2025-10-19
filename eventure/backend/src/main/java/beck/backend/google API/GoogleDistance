@@ -1,0 +1,42 @@
+package beck.backend;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+public class GoogleDistance {
+    public String calculateDistance(String address1, String address2){
+        String apiKey = System.getenv("GOOGLE_MAPS_API_KEY");
+
+        String origin = address1;
+        String destination = address2;
+
+        String urlSave = String.format(
+            "https://maps.googleapis.com/maps/api/distancematrix/json?origins=%s&destinations=%s&key=%s",
+            URLEncoder.encode(origin, StandardCharsets.UTF_8),
+            URLEncoder.encode(destination, StandardCharsets.UTF_8),
+            apiKey
+        );
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(urlSave))
+                .GET()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        String body = response.body();
+
+        JsonObject json = JsonParser.parseString(body).getAsJsonObject();
+        JsonObject element = json
+            .getAsJsonArray("rows")
+            .get(0).getAsJsonObject()
+            .getAsJsonArray("elements")
+            .get(0).getAsJsonObject();
+
+        String duration = element.getAsJsonObject("duration").get("text").getAsString();
+        return duration;
+    }
+}

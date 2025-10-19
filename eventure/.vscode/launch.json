@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "TestBedrock",
+            "request": "launch",
+            "mainClass": "beck.backend.TestBedrock",
+            "projectName": "schedular"
+        },
+        {
+            "type": "java",
+            "name": "PrintEventApp",
+            "request": "launch",
+            "mainClass": "beck.backend.PrintEventApp",
+            "projectName": "schedular"
+        },
+        {
+            "type": "java",
+            "name": "TestingScraping",
+            "request": "launch",
+            "mainClass": "beck.backend.TestingScraping",
+            "projectName": "schedular"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendApplication<schedular>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "beck.backend.BackendApplication",
+            "projectName": "schedular",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
